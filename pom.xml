@@ -9,7 +9,7 @@
 
     <artifactId>cdi-query-parent</artifactId>
     <groupId>com.ctp.cdi.query</groupId>
-    <version>1.0.0.Alpha4-SNAPSHOT</version>
+    <version>1.0.0.Alpha4-base2-03</version>
     <packaging>pom</packaging>
     <name>CDI Query Module</name>
 
@@ -353,6 +353,21 @@
                     <id>sonatype-nexus-staging</id>
                     <name>Nexus Release Repository</name>
                     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <id>base2</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>base2-snapshots</id>
+                    <name>base2 Nexus Snapshots</name>
+                    <url>http://maven.base2services.com/content/repositories/thirdparty/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>base2-releases</id>
+                    <name>base2 Nexus Release Repository</name>
+                    <url>http://maven.base2services.com/content/repositories/thirdparty/</url>
                 </repository>
             </distributionManagement>
         </profile>
