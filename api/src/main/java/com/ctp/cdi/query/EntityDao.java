@@ -1,5 +1,7 @@
 package com.ctp.cdi.query;
 
+import com.ctp.cdi.query.criteria.Criteria;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -14,6 +16,12 @@ import javax.persistence.metamodel.SingularAttribute;
  * @param <PK>  Primary key type.
  */
 public interface EntityDao<E, PK extends Serializable> {
+
+    /**
+     *
+     * @return  Returns the criteria
+     */
+    Criteria criteria();
 
     /**
      * Persist (new entity) or merge the given entity.
